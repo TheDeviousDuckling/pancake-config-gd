@@ -1,0 +1,26 @@
+name: Build Geode Mod (Windows)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    name: Windows
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the mod
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          bindings: geode-sdk/bindings
+          bindings-ref: main
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Windows Build
+          path: build/*.geode
