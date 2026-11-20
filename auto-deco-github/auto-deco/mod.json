@@ -1,0 +1,25 @@
+{
+	"geode": "4.6.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "yourname.auto-deco",
+	"name": "Auto Deco",
+	"version": "v1.0.0",
+	"developer": "yourname",
+	"description": "Auto-decorates selected blocks in the editor from themes (Acheron, Space, Water, Grasslands).",
+	"tags": ["editor", "utility"],
+	"settings": {
+		"density": {
+			"type": "int",
+			"name": "Decoration density (%)",
+			"default": 60,
+			"min": 5,
+			"max": 100,
+			"control": { "slider": true }
+		}
+	}
+}
